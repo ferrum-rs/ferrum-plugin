@@ -1,10 +1,9 @@
-extern crate plugin;
+extern crate ferrum_plugin;
 extern crate void;
-//extern crate typemap;
 
 use void::Void;
-use plugin::{Extensible, Plugin, Pluggable};
-use plugin::typemap::{TypeMap, Key};
+use ferrum_plugin::{Extensible, Plugin, Pluggable};
+use ferrum_plugin::typemap::{TypeMap, Key};
 
 struct Struct {
     map: TypeMap
@@ -40,4 +39,3 @@ fn main() {
     let mut x = Struct { map: TypeMap::new() };
     println!("{:?}", x.get_ref::<IntPlugin>());
 }
-
